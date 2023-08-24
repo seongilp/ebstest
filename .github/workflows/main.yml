@@ -1,0 +1,13 @@
+name: EBS record
+on:
+  schedule:
+    - cron: '0 22 * * 6'
+jobs:
+  run-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: seongilp/autoebs@publish
+        with:
+          BOT_TELEGRAM_TOKEN: ${{ secrets.BOT_TELEGRAM_TOKEN }} 
+          CHAT_ID: ${{ secrets.CHAT_ID }}
