@@ -1,3 +1,0 @@
-- name: EBS record
-  uses: seongilp/autoebs@publish
-            
